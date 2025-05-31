@@ -3,7 +3,7 @@ require 'dry-types'
 
 module TD::Types
   include Dry.Types()
-  
+
   LOOKUP_TABLE = {
       'error'                                                   => 'Error',
       'ok'                                                      => 'Ok',
@@ -1755,11 +1755,12 @@ module TD::Types
       'logStreamEmpty'                                          => 'LogStream::Empty',
       'logVerbosityLevel'                                       => 'LogVerbosityLevel',
       'logTags'                                                 => 'LogTags',
-      'userSupportInfo'                                         => 'UserSupportInfo'
+      'userSupportInfo'                                         => 'UserSupportInfo',
+      'verificationStatus'                                      => 'VerificationStatus'
   }.freeze
-  
+
   module_function
-  
+
   # Recursively wraps a hash into typed classes
   def wrap(object)
     # Wrapping each entry in array
@@ -1767,32 +1768,32 @@ module TD::Types
       object.map { |o| wrap(o) }
     elsif object.kind_of?(::Hash)
       type = object.delete('@type')
-      
+
       object.each do |key, val|
         if val.respond_to?(:each)
           object[key] = wrap(val)
         end
       end
-      
+
       unless type
         return object
       end
-      
+
       if (klass = LOOKUP_TABLE[type])
         const_get(klass).new(object)
       else
         raise ArgumentError.new("Can't find class for #{type}")
       end
-    else 
+    else
       object
     end
   end
-  
+
   # Simple implementation for internal use only.
   def camelize(str)
     str.gsub(/(?:_|(\/)|^)([a-z\d]*)/i) { "#{$1}#{$2.capitalize}" }
   end
-  
+
   %w[
     accent_color
     account_ttl
@@ -2338,6 +2339,7 @@ module TD::Types
     web_app
     web_app_info
     web_page_instant_view
+    verification_status
   ].each do |type|
     autoload camelize(type), "tdlib/types/#{type}"
   end
