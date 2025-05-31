@@ -1756,7 +1756,8 @@ module TD::Types
       'logVerbosityLevel'                                       => 'LogVerbosityLevel',
       'logTags'                                                 => 'LogTags',
       'userSupportInfo'                                         => 'UserSupportInfo',
-      'verificationStatus'                                      => 'VerificationStatus'
+      'verificationStatus'                                      => 'VerificationStatus',
+      'alternativeVideo'                                        => 'AlternativeVideo'
   }.freeze
 
   module_function
@@ -2340,6 +2341,7 @@ module TD::Types
     web_app_info
     web_page_instant_view
     verification_status
+    alternative_video
   ].each do |type|
     autoload camelize(type), "tdlib/types/#{type}"
   end
