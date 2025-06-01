@@ -62,7 +62,7 @@ module TD::Types
     attribute :is_contact, TD::Types::Bool
     attribute :is_mutual_contact, TD::Types::Bool
     attribute :is_close_friend, TD::Types::Bool
-    attribute :verification_status, TD::Types::VerificationStatus
+    # attribute :verification_status, TD::Types::VerificationStatus
     attribute :is_premium, TD::Types::Bool
     attribute :is_support, TD::Types::Bool
     attribute :restriction_reason, TD::Types::String
