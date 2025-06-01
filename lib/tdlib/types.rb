@@ -1757,7 +1757,8 @@ module TD::Types
       'logTags'                                                 => 'LogTags',
       'userSupportInfo'                                         => 'UserSupportInfo',
       'verificationStatus'                                      => 'VerificationStatus',
-      'alternativeVideo'                                        => 'AlternativeVideo'
+      'alternativeVideo'                                        => 'AlternativeVideo',
+      'paidReactionTypeRegular'                                 => 'PaidReactionTypeRegular'
   }.freeze
 
   module_function
