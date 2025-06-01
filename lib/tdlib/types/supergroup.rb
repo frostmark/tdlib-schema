@@ -64,7 +64,6 @@ module TD::Types
     attribute :is_channel, TD::Types::Bool
     attribute :is_broadcast_group, TD::Types::Bool
     attribute :is_forum, TD::Types::Bool
-    attribute :verification_status, TD::Types::VerificationStatus
     attribute :has_sensitive_content, TD::Types::Bool
     attribute :restriction_reason, TD::Types::String
     attribute :has_active_stories, TD::Types::Bool
