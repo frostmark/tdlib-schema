@@ -2343,6 +2343,7 @@ module TD::Types
     web_page_instant_view
     verification_status
     alternative_video
+    paid_reaction_type_regular
   ].each do |type|
     autoload camelize(type), "tdlib/types/#{type}"
   end
