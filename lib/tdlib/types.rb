@@ -1758,7 +1758,8 @@ module TD::Types
       'userSupportInfo'                                         => 'UserSupportInfo',
       'verificationStatus'                                      => 'VerificationStatus',
       'alternativeVideo'                                        => 'AlternativeVideo',
-      'paidReactionTypeRegular'                                 => 'PaidReactionTypeRegular'
+      'paidReactionTypeRegular'                                 => 'PaidReactionTypeRegular',
+      'updateDefaultPaidReactionType'                           => 'UpdateDefaultPaidReactionType'
   }.freeze
 
   module_function
@@ -2344,6 +2345,7 @@ module TD::Types
     verification_status
     alternative_video
     paid_reaction_type_regular
+    update_default_paid_reaction_type
   ].each do |type|
     autoload camelize(type), "tdlib/types/#{type}"
   end
