@@ -14,7 +14,7 @@ module TD::Types
     attribute :video, TD::Types::Video.optional.default(nil)
     # attribute :width, TD::Types::Coercible::Integer
     # attribute :height, TD::Types::Coercible::Integer
-    attribute :duration, TD::Types::Coercible::Integer
+    # attribute :duration, TD::Types::Coercible::Integer
     attribute :author, TD::Types::String
   end
 end
