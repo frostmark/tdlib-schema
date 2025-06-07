@@ -15,6 +15,6 @@ module TD::Types
     # attribute :width, TD::Types::Coercible::Integer
     # attribute :height, TD::Types::Coercible::Integer
     # attribute :duration, TD::Types::Coercible::Integer
-    attribute :author, TD::Types::String
+    # attribute :author, TD::Types::String
   end
 end
