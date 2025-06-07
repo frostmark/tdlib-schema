@@ -12,8 +12,8 @@ module TD::Types
     attribute :url, TD::Types::String.optional.default(nil)
     # attribute :mime_type, TD::Types::String
     attribute :video, TD::Types::Video.optional.default(nil)
-    attribute :width, TD::Types::Coercible::Integer
-    attribute :height, TD::Types::Coercible::Integer
+    # attribute :width, TD::Types::Coercible::Integer
+    # attribute :height, TD::Types::Coercible::Integer
     attribute :duration, TD::Types::Coercible::Integer
     attribute :author, TD::Types::String
   end
