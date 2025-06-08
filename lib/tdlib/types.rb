@@ -1761,7 +1761,8 @@ module TD::Types
       'paidReactionTypeRegular'                                 => 'PaidReactionTypeRegular',
       'updateDefaultPaidReactionType'                           => 'UpdateDefaultPaidReactionType',
       'emojiStatusTypeCustomEmoji'                              => 'EmojiStatusTypeCustomEmoji',
-      'upgradedGiftBackdropColors'                              => 'UpgradedGiftBackdropColors'
+      'upgradedGiftBackdropColors'                              => 'UpgradedGiftBackdropColors',
+      'messagePaidMessagePriceChanged'                          => 'MessagePaidMessagePriceChanged'
   }.freeze
 
   module_function
@@ -2350,6 +2351,7 @@ module TD::Types
     update_default_paid_reaction_type
     emoji_status_type_custom_emoji
     upgraded_gift_backdrop_colors
+    message_paid_message_price_changed
   ].each do |type|
     autoload camelize(type), "tdlib/types/#{type}"
   end
