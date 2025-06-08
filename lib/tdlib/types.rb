@@ -1760,7 +1760,8 @@ module TD::Types
       'alternativeVideo'                                        => 'AlternativeVideo',
       'paidReactionTypeRegular'                                 => 'PaidReactionTypeRegular',
       'updateDefaultPaidReactionType'                           => 'UpdateDefaultPaidReactionType',
-      'emojiStatusTypeCustomEmoji'                              => 'EmojiStatusTypeCustomEmoji'
+      'emojiStatusTypeCustomEmoji'                              => 'EmojiStatusTypeCustomEmoji',
+      'upgradedGiftBackdropColors'                              => 'UpgradedGiftBackdropColors'
   }.freeze
 
   module_function
@@ -2348,6 +2349,7 @@ module TD::Types
     paid_reaction_type_regular
     update_default_paid_reaction_type
     emoji_status_type_custom_emoji
+    upgraded_gift_backdrop_colors
   ].each do |type|
     autoload camelize(type), "tdlib/types/#{type}"
   end
